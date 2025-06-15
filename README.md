@@ -1,53 +1,50 @@
-# AlienXploit
-AlienXploit - An intergalactic AI-powered bug bounty tool 🚀👽
+👽AlienXploit - Intergalactic Bug Hunting Tool 🚀
 
- 👽 AlienXploit v1.2
+> A powerful all-in-one automation tool for reconnaissance, scanning, and vulnerability discovery.  
+> Developed by **Badal Kathayat** (aka *HackerFromHills*) to assist in bug bounty hunting, ethical hacking, and CTF recon missions.
 
-**AlienXploit** is an advanced, alien-themed bug bounty automation tool developed by **Badal Kathayat (aka HackerFromHills)**.  
-It automates the full reconnaissance + scanning process for web applications using some of the most powerful tools in cybersecurity.
 
->  "Hacking the galaxy, one domain at a time..." – AlienXploit
-
+![AlienXploit Banner](https://raw.githubusercontent.com/Badalkathayat/AlienXploit/main/assets/alienxploit_banner.png)
 
  Features
 
-- 🌐 **Subdomain Enumeration** — using `assetfinder`
-- 🛡️ **Port Scanning** — using `nmap`
-- 🚨 **Vulnerability Scanning** — using `nuclei` with default templates
-- 💉 **XSS Scanning** — using `dalfox`
-- 📦 **Full Scan Mode** — runs all the above in parallel and creates ZIP reports
-- 📄 **Log File** — Everything gets saved in `AlienXploit.log`
-- 🎨 Cool alien-themed terminal banner on start
+- ✅ Subdomain Enumeration using `assetfinder`
+- ✅ Port Scanning via `nmap`
+- ✅ Automated Vulnerability Scanning using `nuclei`
+- ✅ XSS Vulnerability Testing using `dalfox`
+- ✅ Multi-threaded Full Scan Mode
+- ✅ Organized output reports (ZIP compressed)
+- ✅ Clean CLI interface with Alien-Hacker themed UI
+- 🚧 *Upcoming*: AI-based recon & bug classification (P1–P4), HTML report generation
 
- Project Structure
-
-
-AlienXploit/
-├── AlienXploit.py      # Main Python script
-├── README.md           # You're reading this
-├── output/             # All scan results saved here
-├── LICENSE             # (Optional)
-└── assets/             # (Optional: for logo/banner image)
+---
 
  Requirements
 
-You must have the following tools installed and accessible from your terminal:
+Make sure the following tools are installed:
 
-- `assetfinder`
-- `nmap`
-- `nuclei`
-- `dalfox`
-- `Python 3.x`
-- Python module: `termcolor` (install using `pip install termcolor`)
+bash
+
+sudo apt update && sudo apt install nmap golang python3
+go install github.com/tomnomnom/assetfinder@latest
+go install github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+go install github.com/hahwul/dalfox/v2@latest
+
+
+> Ensure `$GOPATH/bin` is in your `$PATH`, or move the binaries to `/usr/local/bin`.
+
+
+ Installation
+
+bash
+
+git clone https://github.com/Badalkathayat/AlienXploit.git
+cd AlienXploit
+python3 AlienXploit.py
 
  Usage
 
-bash
-# Run the tool
-python3 AlienXploit.py
-
-
-Once it starts, you'll see a menu like:
+When the script runs, you’ll see a cool alien-style banner and a menu like this:
 
 [1] Subdomain Enumeration
 [2] Port Scan
@@ -55,44 +52,32 @@ Once it starts, you'll see a menu like:
 [4] XSS Scan (Dalfox)
 [5] Run Full Scan
 [6] Exit
-```
-
-Example:
-
-```bash
-Enter your choice: 5
-Enter target domain: example.com
-```
-
-All scan outputs will be saved inside the `/output/` folder and zipped.
 
 
-Disclaimer
-
-> This tool is for **educational and authorized security testing only**.
-> Unauthorized scanning of systems is **illegal** and **strictly discouraged**.
+Select the option by number**, and input the target domain or IP when prompted.
 
 
+ Output Format
 
-👤 Author
+All results will be stored inside the `output/` directory:
 
-* **Name:** Badal Kathayat
-* **Alias:** HackerFromHills
-* **GitHub:** [Badalkathayat](https://github.com/Badalkathayat)
-* **LinkedIn:** [badal-kathayat-hackerfromhills](https://www.linkedin.com/in/badal-kathayat-hackerfromhills/)
+| File                | Description                            |
+| ------------------- | -------------------------------------- |
+| `subdomains.txt`    | Discovered subdomains                  |
+| `nmap_scan.txt`     | Open ports and services                |
+| `nuclei_result.txt` | Vulnerabilities (via nuclei templates) |
+| `dalfox_result.txt` | XSS findings using Dalfox              |
+| `<target>.zip`      | Compressed full scan results           |
 
+ Legal Disclaimer
 
- 📌 Upcoming Features
-
-* 🤖 AI-based Recon (OpenAI/GPT integration)
-* 📊 Better HTML report generation
-* 🧠 Automated Bug Prioritization (P1–P4)
-* ⚙️ Custom Nuclei & Dalfox rulesets
-* 🖼️ Alien-hacker logo/banner integration
+AlienXploit is created for **educational** and **authorized security testing** purposes only. Do **not** use it on systems without permission. You are solely responsible for your actions.
 
 
- ⭐ Show your Support!
+ Author
 
-If you like the project, give it a ⭐ star on GitHub!
-
+**Badal Kathayat**
+Cybersecurity Researcher & Bug Bounty Hunter
+GitHub: [Badalkathayat](https://github.com/Badalkathayat)
+Instagram: [@hackerfromhills](https://instagram.com/hackerfromhills)
 
