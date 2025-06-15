@@ -4,8 +4,6 @@
 > Developed by **Badal Kathayat** (aka *HackerFromHills*) to assist in bug bounty hunting, ethical hacking, and CTF recon missions.
 
 
-![AlienXploit Banner](https://raw.githubusercontent.com/Badalkathayat/AlienXploit/main/assets/alienxploit_banner.png)
-
  Features
 
 - ✅ Subdomain Enumeration using `assetfinder`
@@ -17,7 +15,6 @@
 - ✅ Clean CLI interface with Alien-Hacker themed UI
 - 🚧 *Upcoming*: AI-based recon & bug classification (P1–P4), HTML report generation
 
----
 
  Requirements
 
